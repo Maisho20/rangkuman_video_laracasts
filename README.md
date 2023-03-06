@@ -10,7 +10,10 @@ Memilih tools (Terminal, database, dan text-editor) yang dianggap pas dengan pen
 Menggunakan echo untuk menampilkan baris string dalam php
 
 ## Video 4
-Contoh sederhana penggunaan variable dalam php. perbedaan " dengan ' jika ingin mengembalikan nilai variabel, maka harus menggunakan " untuk mengembalikan nilai variabel
+Contoh sederhana penggunaan variable dalam php. 
+
+perbedaan " dengan ' jika ingin mengembalikan nilai variabel, maka harus menggunakan " untuk mengembalikan nilai variabel
+
 ' digunakan untuk menampilkan isi dari echo apa adanya
 
 ## Video 5
