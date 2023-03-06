@@ -1,15 +1,16 @@
 # rangkuman Video Laracasts
-##Video 1
+
+## Video 1
 pembukaan video, memilih bahasa apa yang akan digunakan untuk membuat website
 
-##Video 2
+## Video 2
 Memilih tools (Terminal, database, dan text-editor) yang dianggap pas dengan pengguna
 
-##Video 3
+## Video 3
 Menggunakan echo untuk menampilkan baris string dalam php
 
-##Video 4
+## Video 4
 Contoh sederhana penggunaan variable dalam php. perbedaan " dengan ' jika ingin mengembalikan nilai variabel, maka harus menggunakan " untuk mengembalikan nilai variabel
 ' digunakan untuk menampilkan isi dari echo apa adanya
 
-##Video 5
+## Video 5
