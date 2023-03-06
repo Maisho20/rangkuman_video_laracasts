@@ -14,3 +14,5 @@ Contoh sederhana penggunaan variable dalam php. perbedaan " dengan ' jika ingin 
 ' digunakan untuk menampilkan isi dari echo apa adanya
 
 ## Video 5
+Contoh penggunaan boolean sederhana dengan menggunakan if else
+Di php echo dapat di singkat dengan menggunakan <?= message ?>
