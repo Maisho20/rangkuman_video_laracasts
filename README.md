@@ -1,7 +1,7 @@
 # rangkuman Video Laracasts
 
 ## Video 1
-pembukaan video, memilih bahasa apa yang akan digunakan untuk membuat website
+Pembukaan video, memilih bahasa apa yang akan digunakan untuk membuat website
 
 ## Video 2
 Memilih tools (Terminal, database, dan text-editor) yang dianggap pas dengan pengguna
