@@ -17,22 +17,22 @@ Dalam Memilih bahasa pemrograman, kita harus mempertimbangkan tujuan apa yang ki
 
 ## Video 3 - Tag PHP
 #### Di dalam php, untuk memulai menuliskan tag php dimulai dengan tulisan berikut
-```
+```php
 <?php
   //code line
 ?>
 ```
 #### Untuk menamplkan hasil tulisan file dengan format .php dapat menggunakan code berikut di terminal anda
-```
+```php
 php -S localhost:8000
 ```
 #### Untuk menampilkan baris kode ke web browser, di dalam tag php, digunakan perintah ``` echo ```, Contoh:
-```
+```php
 <?php echo "Hello, Commander";?>
 ```
 ##  Video 4 - Variables
 ####  php, penamaan variabel dapat dinamai dengan menggunakan tanda ``` $ ```, contoh:
-```
+```php
 <?php
   $greeting = "Hello, ";
   echo "$greeting World";
@@ -43,7 +43,7 @@ php -S localhost:8000
 
 ## Video 5 - Conditionals and Boolean
 #### Contoh penggunaan boolean sederhana dengan menggunakan if else:
-```
+```php
 <?php 
   $name = "The Book Of Vishanti";
   $read = true;
@@ -65,7 +65,7 @@ php -S localhost:8000
 ## Video 6 - Array
 #### Array Merupakan sebuah tipe data terstruktur yang dapat menyimpan banyak data dengan suatu nama yang sama dan menempati tempat di memori yang berurutan serta bertipe data yang berbeda-beda
 #### Secara umum, jika membuat list sederhana dalam html, kita dapat menggunakan
-```
+```php
 <h1>Recommended Steam Games</h1>
 
 <ul>
@@ -75,7 +75,7 @@ php -S localhost:8000
 </ul>
 ```
 #### Namun, jika ingin membuat sebuah kumpulan data yang disimpan di dalam array lalu menampilakn di html, kita dapat menggunakan kode sebagai berikut
-```
+```php
 <h1>Recommended Steam Games</h1>
 
 <?php
@@ -87,7 +87,7 @@ php -S localhost:8000
 ?>
 ```
 #### Untuk pemanggilan data pada array dapat menggunakan looping foreach di dalam tag html sebagai berikut
-```
+```php
 <ul>
   <?php foreach ($games as $game){
     echo "<li>$game</li>";
@@ -96,7 +96,7 @@ php -S localhost:8000
 </ul>
 ```
 #### Alternatif lain:
-```
+```php
 <?php
   $games = [
     "Dota 2",
@@ -114,7 +114,7 @@ php -S localhost:8000
 ## Video 7 - Associative Array
 #### Associative Array merupakan array yang memiliki nilai key dan value
 Berikut merupakan contoh pemanggilan array biasa menggunakan value
-```
+```php
 <?php
   $games = [
     "Dota 2", --> data 0
@@ -128,7 +128,7 @@ Berikut merupakan contoh pemanggilan array biasa menggunakan value
 ```
 
 #### Berikut Merupakan contoh penggunaan Associative Array untuk memanggil isi array yang belih rinci
-```
+```php
 <h1>Recommended Steam Games</h1>
 
 <?php
@@ -152,7 +152,7 @@ Berikut merupakan contoh pemanggilan array biasa menggunakan value
 ?>
 ```
 #### untuk pemanggilannya dapat menggunakan code berikut
-```
+```php
 <ul>
   <li>
       <?php foreach ($games as $game): ?>
