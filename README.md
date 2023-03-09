@@ -154,13 +154,13 @@ Berikut merupakan contoh pemanggilan array biasa menggunakan value
 #### untuk pemanggilannya dapat menggunakan code berikut
 ```php
 <ul>
-  <li>
       <?php foreach ($games as $game): ?>
-        <h2><?= $game['name'] ?></h2> 
-        <p> By <?= $game['publisher'] ?></p> 
-        <a href="<?= $game['links'] ?>">Download Now</a> 
+        <li>
+          <h2><?= $game['name'] ?></h2> 
+          <p> By <?= $game['publisher'] ?></p> 
+          <a href="<?= $game['links'] ?>">Download Now</a>
+        </li>
       <?php endforeach ?>
-  </li>
 </ul>
 ```
 
