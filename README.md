@@ -41,7 +41,7 @@ php -S localhost:8000
 ```
 #### perbedaan ``` " ``` dengan ``` ' ``` jika ingin mengembalikan nilai variabel, maka harus menggunakan ``` " ``` untuk mengembalikan nilai variabel. Simbol ``` ' ``` digunakan untuk menampilkan isi dari echo apa adanya
 
-## Video 5 - Boolean
+## Video 5 - Conditionals and Boolean
 #### Contoh penggunaan boolean sederhana dengan menggunakan if else:
 ```
 <?php 
