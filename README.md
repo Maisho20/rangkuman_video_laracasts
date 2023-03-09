@@ -31,7 +31,7 @@ php -S localhost:8000
 <?php echo "Hello, Commander";?>
 ```
 ##  Video 4 - Variables
-####  php, penamaan variabel dapat dinamai dengan menggunakan tanda ``` $ ```, contoh:
+####  Di php, penamaan variabel dapat dinamai dengan menggunakan tanda ``` $ ```, contoh:
 ```php
 <?php
   $greeting = "Hello, ";
