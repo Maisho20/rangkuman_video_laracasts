@@ -163,3 +163,65 @@ Berikut merupakan contoh pemanggilan array biasa menggunakan value
   </li>
 </ul>
 ```
+
+## Video 8 - Functions And Filtering
+
+## Video 9 - Lambda Functions
+
+## Video 10 - Separate PHP Logic From the Template
+
+## Video 11 - Technical Check-In
+
+## Video 12 - Page Links
+
+## Video 13 - Partials
+
+## Video 14 - Superglobals and Current Page Styling
+
+## Video 15 - Make a PHP Router
+
+## Video 16 - Create a MySql Database
+
+## Video 17 - PDO First Steps
+
+## Video 18 - Extract a PHP Database Class
+
+## Video 19 - Environments and Configuration
+
+## Video 20 - SQL Injection Vulnerabilities Explained
+
+## Video 21 - Mini-Project: Notes App
+
+## Video 22 - Render the Notes and Note Page
+
+## Video 23 - Introduction to Authorization
+
+## Video 24 - Programming is Rewriting
+
+## Video 25 - Intro to Forms and Request Methods
+
+## Video 26 - Always Escape Untrusted Input
+
+## Video 27 - Introduction to Form Validation
+
+## Video 28 - Extract a Simple Validation Class
+
+## Video 29 - Resourceful Naming Conventions
+
+## Video 30 - Autoloading and Extraction
+
+## Video 31 - Namespacing : What, Why, How
+
+## Video 32 - Handle Multiple Request Methods From a Controller Action
+
+## Video 33 - Build a Better PHP Router
+
+## Video 34 - One Request, One Controller
+
+## Video 35 - Make Your First Service Container
+
+## Video 36 - Updating a Resource With PATCH
+
+## Video 37 - Sessions 101
+
+## Video 38 - Register a New User
