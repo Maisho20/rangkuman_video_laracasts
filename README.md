@@ -165,6 +165,7 @@ Berikut merupakan contoh pemanggilan array biasa menggunakan value
 ```
 
 ## Video 8 - Functions And Filtering
+#### Dalam filtering tanda ``` = ``` 
 
 ## Video 9 - Lambda Functions
 
