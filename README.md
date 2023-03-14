@@ -165,7 +165,24 @@ Berikut merupakan contoh pemanggilan array biasa menggunakan value
 ```
 
 ## Video 8 - Functions And Filtering
-#### Dalam filtering tanda ``` = ``` 
+#### Functions adalah blok kode yang dapat dipanggil berulang kali dalam sebuah program, dan dapat membantu mempermudah pembuatan program
+#### Filtering pada PHP adalah proses memvalidasi dan memanipulasi input yang diberikan oleh pengguna.
+#### Dalam filtering tanda ``` = ``` jika hanya terdapat 1, maka akan berfungsi mengembalikan nilai yang ada di database menjadi nilai yang kita inputkan dalam perulangan dan jika ingin menggunakan ``` = ``` untuk pengecekan atau filtering dapat menggunakan 3 tanda ``` = ```
+
+#### Penggunaan filtering sederhana
+```php
+<?php foreach ($games as $game): ?>
+  <?php if($game['publisher'] == 'valve') : ?> <== Proses filtering
+    <li>
+      <h2><?= $game['name'] ?></h2> 
+      <p> By <?= $game['publisher'] ?></p>
+      <a href="<?= $game['links'] ?>" target="_blank">Download Now</a>
+    </li>
+  <?php endif ?>
+<?php endforeach ?>
+```
+#### Sebuah fungsi akan tereksekusi jika fungsi tersebut telah dipanggil
+
 
 ## Video 9 - Lambda Functions
 
