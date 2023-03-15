@@ -181,10 +181,85 @@ Berikut merupakan contoh pemanggilan array biasa menggunakan value
   <?php endif ?>
 <?php endforeach ?>
 ```
-#### Sebuah fungsi akan tereksekusi jika fungsi tersebut telah dipanggil
+#### Di dalam sebuah fungsi bisa di isikan berbagai macam perintah seperti looping, boolean, array dan lain sebagainya. cara menggunakan fungsi di php kita harus mendeklarasi dahulu sebuah fungsi lalu memanggilnya
+#### Berikut contoh pembuatan dan pemanggilan fungsi sederhana
+```php
+<?php 
+  function filterByPublisher() { //<---Deklarasi fungsi
+    //
+  };
+?>
+<P>
+  <?= filterByPublisher() ?> //<---Pemanggilan fungsi
+</p>
+```
+#### Mengabungkan filtering dengan fungsi
+```php
+    //database yang dibuat
+    <?php
+     $games = [
+        [
+            'name' => "Dota 2",
+            'publisher' => "Valve",
+            'releaseDate' => "10 Jul, 2013",
+            'links' => "https://store.steampowered.com/app/570/Dota_2/"
+        ],
+        [
+            'name' => "Counter-Strike: Global Offensive",
+            'publisher' => "Valve",
+            'releaseDate' => "22 Aug, 2012",
+            'links' => "https://store.steampowered.com/app/730/CounterStrike_Global_Offensive/"
+        ],
+        [
+            'name' => "Need for Speed™ Heat",
+            'publisher' => "Electronic Arts",
+            'releaseDate' => "8 nov, 2019",
+            'links' => "https://store.steampowered.com/app/1222680/Need_for_Speed_Heat/"
+        ]
+     ];
+        
+        //pembuatan fungsi
+        function filterByPublisher($games) {
+            $filteredGames = [];
 
+            foreach ($games as $game){
+                if ($game['publisher'] === 'Valve'){
+                    $filteredGames[] = $game;
+                }
+            }
+            return $filteredGames;
+        };
+    ?>
+    
+    <ul>
+        <!-- penggunaan filtering dengan fungsi -->
+        <?php foreach (filterByPublisher($games) as $game): ?>
+            <li>
+                <h2><?= $game['name'] ?></h2> 
+                <p> By <?= $game['publisher'] ?></p>
+                <a href="<?= $game['links'] ?>" target="_blank">Download Now</a> 
+            </li>
+        <?php endforeach ?>
+    </ul>
+```
 
 ## Video 9 - Lambda Functions
+#### Function dapat digunakan untuk menfilter game berdasarkan ``` publisher ``` tetapi jika kita ingin menambahkan opsi filter lagi, kita harus membuat function baru. Sehingga kita bisa menggunakan lambda function untuk membuat function yang lebih dinamis. Function yang dibuat sebelumnya juga dapat dimasukkan ke dalam sebuah variabel yang dinamakan ``` extract variable ```
+
+#### Contoh penggunaan
+```php
+<ul>
+  <?php $filterByPublisher = filterByPublisher($games, 'Valve'); ?> <!--  extract variable -->
+  <?php foreach ($filterByPublisher as $game): ?>
+    <li>
+      <h2><?= $game['name'] ?></h2> 
+      <p> By <?= $game['publisher'] ?></p>
+      <a href="<?= $game['links'] ?>" target="_blank">Download Now</a> 
+    </li>
+  <?php endforeach ?>
+</ul>
+```
+
 
 ## Video 10 - Separate PHP Logic From the Template
 
