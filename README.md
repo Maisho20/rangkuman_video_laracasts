@@ -248,8 +248,8 @@ Berikut merupakan contoh pemanggilan array biasa menggunakan value
 
 #### Contoh penggunaan
 ```php
+<?php $filterByPublisher = filterByPublisher($games, 'Valve'); ?> <!--  extract variable -->
 <ul>
-  <?php $filterByPublisher = filterByPublisher($games, 'Valve'); ?> <!--  extract variable -->
   <?php foreach ($filterByPublisher as $game): ?>
     <li>
       <h2><?= $game['name'] ?></h2> 
@@ -260,7 +260,110 @@ Berikut merupakan contoh pemanggilan array biasa menggunakan value
 </ul>
 ```
 
+#### Function juga dapat dibuat dan disimpan dalam variabel. Hal ini dinamakan ``` Lambda Function / Anonymous Function ```.
+```php
+<?php
+$filterByPublisher = function ($games, $publisher) {
+  $filteredGames = [];
 
+  foreach ($games as $game){
+    if ($game['publisher'] === $publisher){
+      $filteredGames[] = $game;
+    }
+  }
+  return $filteredGames;
+};
+
+  $filterByPublisher = $filterByPublisher($games, 'Valve'); //extract variable 
+?>
+
+<ul>
+  <?php foreach ($filterByPublisher as $game): ?>
+    <li>
+      <h2><?= $game['name'] ?></h2> 
+      <p> By <?= $game['publisher'] ?></p>
+      <a href="<?= $game['links'] ?>" target="_blank">Download Now</a> 
+    </li>
+  <?php endforeach ?>
+</ul>
+```
+
+#### Function sebelumnya dapat disederhanakan dengan menggunakan ``` refactoring ``` dengan cara menambahkan parameter function sesuai dengan ``` key ``` dan ``` value ``` yang akan difilter.
+```php
+<?php
+function filter($items, $key, $value) {
+  $filteredItems = [];
+
+  foreach ($items as $item){
+    if ($item[$key] === $value){
+      $filteredItems[] = $item;
+    }
+  }
+  return $filteredItems;
+};
+
+  $filtergames = filter($games, 'releaseYear', '2019'); //extract variable 
+?>
+
+<ul>
+  <?php foreach ($filterByPublisher as $game): ?>
+    <li>
+      <h2><?= $game['name'] ?></h2> 
+      <p> By <?= $game['publisher'] ?></p>
+      <a href="<?= $game['links'] ?>" target="_blank">Download Now</a> 
+    </li>
+  <?php endforeach ?>
+</ul>
+```
+
+####  Refactoring juga dapat diimplementasikan jika menginginkan value yang lebih fleksibel, misalnya terdapat data dengan tipe data integer dan ingin ditampilkan data yang <= dari value tersebut, maka kita dapat memisahkan pengkondisian if ke dalam sebuah function, sehingga menjadi :
+```php
+<?php
+function filter($items, $fn) {
+  $filteredItems = [];
+
+  foreach ($items as $item){
+    if ($fn($item)){
+      $filteredItems[] = $item;
+    }
+  }
+  return $filteredItems;
+};
+
+  $filtergames = filter($games, function($game){
+    return $game['releaseYear'] <= 2015;
+  }); //extract variable 
+?>
+
+<ul>
+  <?php foreach ($filterByPublisher as $game): ?>
+    <li>
+      <h2><?= $game['name'] ?></h2> 
+      <p> By <?= $game['publisher'] ?></p>
+      <a href="<?= $game['links'] ?>" target="_blank">Download Now</a> 
+    </li>
+  <?php endforeach ?>
+</ul>
+```
+
+#### Sebenarnya untuk melakukan filtering seperti diatas, PHP sudah menyediakan built-in function, sehingga tidak perlu membuat secara manual, yaitu menggunakan fungsi bawaan ``` array_filter() ``` :
+```php
+<?php
+$filtergames = array_filter($games, function($game){
+    return $game['releaseYear'] <= 2015;
+  }); //extract variable 
+?>
+
+<ul>
+  <?php foreach ($filterByPublisher as $game): ?>
+    <li>
+      <h2><?= $game['name'] ?></h2> 
+      <p> By <?= $game['publisher'] ?></p>
+      <a href="<?= $game['links'] ?>" target="_blank">Download Now</a> 
+    </li>
+  <?php endforeach ?>
+</ul>
+```
 ## Video 10 - Separate PHP Logic From the Template
 
 ## Video 11 - Technical Check-In
